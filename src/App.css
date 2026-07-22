@@ -1,0 +1,17 @@
+/* ==========================================================================
+   App.css — Central CSS Index
+   แต่ละส่วนถูกแยกไปไว้ในโฟลเดอร์ src/styles/
+   ========================================================================== */
+
+@import './styles/variables.css';   /* CSS Variables, Reset, Typography */
+@import './styles/layout.css';      /* App shell, main_content, footer, toast */
+@import './styles/navbar.css';      /* Navbar */
+@import './styles/sidebar.css';     /* Sidebar */
+@import './styles/composer.css';    /* Post composer (Input) */
+@import './styles/post.css';        /* Post card, reactions, share, comments */
+@import './styles/post-modal.css';  /* Photo viewer modal (PostModal) */
+@import './styles/stories.css';     /* Story cards & track */
+@import './styles/story-viewer.css';/* Story viewer overlays */
+@import './styles/story-creator.css';/* Story creator panel */
+@import './styles/contacts.css';    /* Contacts sidebar (right) */
+@import './styles/responsive.css';  /* Media queries (responsive) */

@@ -1,0 +1,177 @@
+@media (max-width: 1200px) {
+  .Navbar {
+    padding-inline: 12px;
+    gap: 10px;
+  }
+
+  .navbar__left,
+  .navbar__right {
+    flex-basis: auto;
+  }
+
+  .search-box {
+    width: 220px;
+  }
+
+  .profile-btn span {
+    display: none;
+  }
+
+  .main_content {
+    gap: 24px;
+  }
+
+  .sidebar {
+    width: 240px;
+    flex-basis: 240px;
+  }
+
+  .contacts-sidebar {
+    width: 220px;
+    flex-basis: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  .navbar__center {
+    display: none;
+  }
+
+  .main_content {
+    justify-content: center;
+    padding-inline: 12px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .contacts-sidebar {
+    display: none;
+  }
+
+  .post_section {
+    max-width: 680px;
+  }
+
+  .stories__track {
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+
+  .stories__next {
+    display: none;
+  }
+
+  .story-creator {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+
+  .story-creator__sidebar {
+    width: 100%;
+    flex-basis: auto;
+  }
+
+  .story-creator__main {
+    padding: 28px 16px;
+  }
+
+  .story-creator__cards {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+
+  .story-option {
+    height: 220px;
+  }
+}
+
+@media (max-width: 720px) {
+  .Navbar {
+    gap: 8px;
+  }
+
+  .search-box {
+    width: clamp(112px, 34vw, 180px);
+    padding-inline: 10px;
+  }
+
+  .search-box input {
+    display: block;
+    font-size: 14px;
+  }
+
+  .navbar__center {
+    gap: 2px;
+  }
+
+  .nav-icon {
+    width: 48px;
+  }
+
+  .icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 420px) {
+  .Navbar {
+    padding-inline: 8px;
+  }
+
+  .search-box {
+    width: 112px;
+  }
+}
+
+@media (max-width: 520px) {
+  .Post__footer button,
+  .Post__actions > button,
+  .reaction-control > button,
+  .share-control > button {
+    gap: 5px;
+    padding-inline: 4px;
+    font-size: 13px;
+  }
+
+  .share-menu {
+    right: -8px;
+    width: 260px;
+  }
+
+  .stories__track {
+    grid-auto-columns: 112px;
+  }
+
+  .story-card {
+    height: 170px;
+  }
+
+  .composer__preview {
+    margin-left: 0;
+  }
+
+  .composer {
+    padding: 12px;
+  }
+
+  .composer__quick-actions {
+    gap: 6px;
+    margin-left: 0;
+  }
+
+  .composer__quick-action {
+    width: 24px;
+    font-size: 22px;
+  }
+
+  .story-text-panel {
+    flex-direction: column;
+  }
+
+  .story-text-panel button {
+    min-height: 44px;
+  }
+}

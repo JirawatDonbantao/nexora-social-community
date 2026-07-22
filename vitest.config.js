@@ -1,0 +1,16 @@
+import { defineConfig } from "vitest/config";
+
+export default defineConfig({
+  test: {
+    environment: "jsdom",
+    environmentOptions: {
+      jsdom: {
+        pretendToBeVisual: true,
+      },
+    },
+    setupFiles: "./src/test/setup.js",
+    include: ["src/**/*.{test,spec}.{js,jsx}"],
+    clearMocks: true,
+    restoreMocks: true,
+  },
+});

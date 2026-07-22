@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="brandGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5"/>
+      <stop offset="52%" stop-color="#7C3AED"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+    <linearGradient id="brandGradientHorizontal" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="55%" stop-color="#4F46E5"/>
+      <stop offset="100%" stop-color="#06B6D4"/>
+    </linearGradient>
+  </defs>
+  <circle cx="512" cy="512" r="300" fill="none" stroke="url(#brandGradient)" stroke-width="60" stroke-linecap="round" stroke-dasharray="1335 555" transform="rotate(-28 512 512)"/>
+  <circle cx="551" cy="500" r="171" fill="none" stroke="url(#brandGradientHorizontal)" stroke-width="46.8" stroke-linecap="round" stroke-dasharray="795 330" transform="rotate(148 551 500)"/>
+</svg>

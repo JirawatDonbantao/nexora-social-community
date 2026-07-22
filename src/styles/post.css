@@ -1,0 +1,417 @@
+.Post {
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-card);
+}
+
+/* ── Post Header ── */
+.Post__user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px 8px;
+}
+
+.Post__meta {
+  min-width: 0;
+  flex: 1;
+}
+
+.Post__user h3 {
+  margin: 0;
+  color: var(--color-heading);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.Post__user p {
+  margin: 2px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.Post__menu-btn,
+.Post__delete {
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.Post__menu-btn:hover:not(:disabled),
+.Post__delete:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.Post__menu-btn:disabled {
+  opacity: 0.42;
+  cursor: default;
+}
+
+.Post__delete:hover {
+  color: var(--color-danger);
+}
+
+/* ── Post Content ── */
+.Post__content p {
+  padding: 0 16px 10px;
+  color: var(--color-text);
+  font-size: 15.5px;
+  line-height: 1.42;
+  text-align: left;
+}
+
+.Post__image {
+  width: 100%;
+  max-height: 620px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── Stats Bar ── */
+.post-stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+.post-stats-left,
+.stats-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.stats-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-secondary);
+  font-size: 15px;
+}
+
+.stats-item--clickable {
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 2px 4px;
+  transition: background-color 0.2s;
+}
+
+button.stats-item {
+  border: 0;
+  background: transparent;
+  font: inherit;
+}
+
+.stats-item--clickable:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.stats-item--reaction {
+  cursor: pointer;
+}
+
+.stats-item svg {
+  font-size: 16px;
+}
+
+.post-stats-right,
+.stats-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Reaction badges — overlapping circles */
+.stats-badges {
+  display: flex;
+  flex-direction: row;
+}
+
+.stats-badge {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--color-surface);
+  object-fit: cover;
+  background: var(--color-surface);
+}
+
+.stats-badge.reaction-gif {
+  width: 20px;
+  height: 20px;
+}
+
+.stats-badge + .stats-badge {
+  margin-left: -6px;
+}
+
+/* ── Compact Reaction Control ── */
+.reaction-control--compact {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.reaction-control--compact .reaction-picker {
+  bottom: 30px;
+}
+
+/* ── Action Buttons (Modal only) ── */
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.action-btn svg {
+  font-size: 20px;
+}
+
+.action-btn.selected {
+  color: var(--color-primary);
+}
+
+/* ── Shared Post Embed ── */
+.shared-post {
+  margin: 0 16px 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  background-color: var(--color-surface);
+}
+
+.shared-post__header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+}
+
+.shared-post__header img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.shared-post__header strong {
+  display: block;
+  color: var(--color-heading);
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.shared-post__header span {
+  display: block;
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+}
+
+.shared-post p {
+  padding: 0 12px 12px;
+  color: var(--color-heading);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.shared-post__image {
+  width: 100%;
+  max-height: 460px;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── Reaction Picker ── */
+.reaction-control {
+  position: relative;
+  display: flex;
+}
+
+.reaction-picker {
+  position: absolute;
+  bottom: 42px;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  gap: 4px;
+  padding: 7px 9px;
+  border-radius: 999px;
+  background-color: var(--color-surface);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition-delay: 0.3s;
+}
+
+.reaction-picker::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 20px;
+}
+
+.reaction-control:hover .reaction-picker,
+.reaction-control:focus-within .reaction-picker,
+.reaction-control[data-picker-open="true"] .reaction-picker {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.reaction-picker button {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.16s ease;
+}
+
+.reaction-picker button:hover {
+  transform: translateY(-7px) scale(1.18);
+}
+
+.reaction-button__emoji {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* ── Reaction GIF sizing ── */
+.reaction-gif {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+.reaction-gif--sm {
+  width: 18px;
+  height: 18px;
+}
+
+.reaction-picker button:hover .reaction-gif {
+  transform: scale(1.15);
+  transition: transform 0.15s ease;
+}
+
+.reaction-button__emoji .reaction-gif {
+  width: 22px;
+  height: 22px;
+}
+
+/* ── Share Modal ── */
+.share-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+}
+
+.share-modal-content {
+  background: var(--color-surface);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.share-modal-content h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  text-align: center;
+  color: var(--color-heading);
+}
+
+.share-modal-content button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--color-background);
+  color: var(--color-heading);
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.share-modal-content button:hover {
+  background: var(--color-surface-hover);
+}
+
+.share-modal-content svg {
+  width: 24px;
+  flex: 0 0 24px;
+  color: var(--color-text-secondary);
+  font-size: 22px;
+}
+
+.share-modal-content strong,
+.share-modal-content small {
+  display: block;
+}
+
+.share-modal-content strong {
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.share-modal-content small {
+  margin-top: 2px;
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  line-height: 1.2;
+}
