@@ -145,7 +145,7 @@ e2e/           Playwright browser tests
 5. [Authentication และความปลอดภัย](document/05-authentication-and-security.md)
 6. [ดีไซน์, Asset และ Style](document/06-design-assets-and-styles.md)
 7. [สารบัญอ้างอิงไฟล์ต้นฉบับ](document/07-source-file-reference.md)
-8. [สารบัญภาพประกอบโครงการ (PDF)](document/Nexora-Image-Catalog.pdf)
+8. [สารบัญภาพประกอบโครงการ (PDF - เปิดหรือดาวน์โหลด)](https://raw.githubusercontent.com/JirawatDonbantao/nexora-social-community/main/document/Nexora-Image-Catalog.pdf)
 
 ## ขอบเขตของ Demo
 
