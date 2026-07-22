@@ -6,6 +6,41 @@ Nexora คือเว็บ Social Community สำหรับทดลอง�
 
 ผู้พัฒนา: **Jirawat Donbantao**
 
+## สถานะการพัฒนา
+
+**สถานะโดยรวม: พร้อมเผยแพร่เป็นผลงาน Portfolio และ source code บน GitHub แต่ยังไม่ใช่บริการ Social Community ที่พร้อมใช้งานจริงในระดับ production**
+
+### สิ่งที่พัฒนาแล้ว
+
+| ส่วนงาน | สถานะ | รายละเอียด |
+| --- | --- | --- |
+| แบรนด์และหน้าตา Nexora | เสร็จแล้ว | มีโลโก้ Loop, design token, responsive layout และหน้า Login/Signup ในธีม Aurora |
+| หน้า Home และ Feed | เสร็จแล้ว | แสดง Feed, Stories, Sidebar, Contacts และค้นหาโพสต์/ผู้ติดต่อจากข้อมูลเดโม |
+| การมีส่วนร่วมกับโพสต์ | เสร็จแล้ว | สร้าง/ลบ/แชร์โพสต์แบบเดโม, Reaction, Comment, Reply และอัปโหลดรูปพร้อมตรวจชนิดไฟล์/ขนาด |
+| Authentication | เสร็จแล้วในโค้ด | รองรับ Email/Password และ Google Sign-In ผ่าน Firebase เมื่อผู้ใช้ตั้งค่า `.env`, provider และ Authorized domains ครบ |
+| การเข้าถึงและการใช้งาน | เสร็จแล้ว | รองรับ keyboard, focus state, dialog focus management, Escape และการใช้งานบน Desktop/Tablet/Mobile |
+| คุณภาพโค้ด | ผ่านการตรวจ | ตรวจ lint, unit tests 21 รายการ, build, browser E2E และ dependency audit แล้วผ่านก่อนเผยแพร่ |
+| เอกสารและภาพตัวอย่าง | เสร็จแล้ว | มี README, เอกสารเชิงลึก 7 ไฟล์ และภาพหน้าจอประกอบใน `document/` |
+
+### สิ่งที่ยังไม่พัฒนา
+
+- **ฐานข้อมูลถาวร:** ยังไม่มี Firebase Firestore หรือ Realtime Database ดังนั้นโพสต์, ความคิดเห็น, Reaction และ Story ที่สร้างระหว่างใช้งานจะหายเมื่อรีเฟรชหน้า
+- **พื้นที่เก็บรูปภาพ:** ยังไม่มี Firebase Storage; รูปที่ผู้ใช้เลือกใช้ได้เฉพาะใน browser session ปัจจุบัน
+- **หน้ารายละเอียดโพสต์และ Copy Link:** ยังไม่มี URL เช่น `/posts/:id` ปุ่ม Copy Link จึงแสดงข้อความว่าเป็นฟีเจอร์เดโม
+- **ฟีเจอร์ชุมชนจริง:** Messenger, Notification, เมนูตัวเลือกโพสต์, กลุ่ม, รายชื่อผู้ติดต่อ และเมนู Sidebar หลายส่วนเป็นข้อมูล/ปุ่มเดโม ยังไม่มี backend รองรับ
+- **การจัดการบัญชี:** ยังไม่มีลืมรหัสผ่าน, ยืนยันอีเมล, แก้ไขโปรไฟล์, ลบบัญชี หรือจัดการสิทธิ์ผู้ใช้
+- **ความปลอดภัยระดับบริการ:** ยังไม่มีระบบรายงานเนื้อหา, moderation, rate limiting ฝั่ง server, audit log หรือกฎฐานข้อมูล/Storage เพราะยังไม่มี backend ในโครงการนี้
+- **การเผยแพร่ระบบ:** ยังไม่ได้ deploy, ตั้งโดเมนจริง, ตั้งค่า environment variables บนโฮสต์ หรือทำ CI/CD
+- **เอกสารสำหรับผู้ใช้จริง:** ยังไม่มีหน้า Terms of Service และ Privacy Policy เนื่องจากยังเป็นโครงการเพื่อการเรียนรู้และ Portfolio
+
+### ลำดับการต่อยอดที่แนะนำ
+
+1. Deploy เว็บและเพิ่มโดเมนจริงใน Firebase Authorized domains พร้อมตั้งค่า environment variables บนโฮสต์
+2. เพิ่ม Firestore และกำหนด Security Rules ก่อนบันทึกโพสต์/คอมเมนต์/โปรไฟล์จริง
+3. เพิ่ม Firebase Storage พร้อม rules และการย่อ/ตรวจรูปภาพบน server ก่อนเปิดให้ผู้ใช้หลายคนอัปโหลด
+4. สร้างหน้าโปรไฟล์, reset password, email verification และหน้ารายละเอียดโพสต์
+5. เพิ่ม Terms, Privacy, reporting/moderation และการทดสอบ CI ก่อนเปิดใช้งานสาธารณะ
+
 ## เว็บนี้ทำอะไรได้บ้าง
 
 - อ่านและค้นหาโพสต์ในหน้า Home
