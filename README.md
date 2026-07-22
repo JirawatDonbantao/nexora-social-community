@@ -2,7 +2,7 @@
 
 Nexora คือเว็บ Social Community สำหรับทดลองแนวคิดการเชื่อมต่อผู้คน การแบ่งปันเรื่องราว และการสร้างชุมชนออนไลน์ หน้าตาและรูปแบบการใช้งานได้รับแรงบันดาลใจจากแพลตฟอร์ม social feed แต่ได้รับการออกแบบแบรนด์และข้อมูลเดโมใหม่เป็น Nexora โดยไม่มีความเกี่ยวข้องกับ Facebook หรือ Meta
 
-โปรเจกต์นี้เป็นผลงานจากรายวิชา [**การพัฒนาซอฟต์แวร์ด้วยเทคโนโลยี Front-End**]
+โปรเจกต์นี้เป็นผลงานจากรายวิชา **การพัฒนาซอฟต์แวร์ด้วยเทคโนโลยี Front-End** — ทล.บ 1/1 2569
 
 ผู้พัฒนา: **Jirawat Donbantao**
 
@@ -69,16 +69,30 @@ Nexora คือเว็บ Social Community สำหรับทดลอง�
 
 ภาพเพิ่มเติม รวมถึง Mobile และหน้าต่างฟีเจอร์ต่าง ๆ อยู่ที่ [document/screenshots](document/screenshots/)
 
-## เทคโนโลยีที่ใช้
+## เทคโนโลยี ไลบรารี และเครื่องมือ
 
-- **React 19** สำหรับสร้างส่วนติดต่อผู้ใช้
-- **Vite** สำหรับพัฒนาและ build โปรเจกต์
-- **React Router** สำหรับเส้นทางหน้าเว็บ
-- **Firebase Authentication** สำหรับ Email/Password และ Google Sign-In
-- **React Icons** สำหรับไอคอน
-- **CSS** สำหรับ Nexora design system และ responsive layout
-- **Vitest + Testing Library** สำหรับ unit test
-- **Playwright** สำหรับทดสอบหน้าเว็บใน browser
+### ไลบรารีที่ใช้ขณะรันเว็บ
+
+| Package | หน้าที่ |
+| --- | --- |
+| `react` และ `react-dom` | สร้างและแสดงผลส่วนติดต่อผู้ใช้ด้วย React 19 |
+| `react-router-dom` | จัดการเส้นทาง `/`, `/login` และ `/signup` |
+| `firebase` | เชื่อม Firebase Authentication สำหรับ Email/Password และ Google Sign-In |
+| `react-icons` | แสดงไอคอนของเมนู ปุ่ม และปฏิสัมพันธ์ในหน้าเว็บ |
+| `prop-types` | ตรวจรูปแบบ props ของ React component ระหว่างพัฒนา |
+
+### เครื่องมือสำหรับพัฒนาและตรวจคุณภาพ
+
+| เครื่องมือ / Package | หน้าที่ |
+| --- | --- |
+| `vite` และ `@vitejs/plugin-react` | เปิด development server และ build ไฟล์สำหรับ production |
+| `eslint`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh` | ตรวจรูปแบบโค้ดและข้อผิดพลาดทั่วไปของ React |
+| `vitest`, `jsdom`, `@testing-library/react`, `@testing-library/user-event`, `@testing-library/jest-dom` | ทดสอบ component และพฤติกรรมผู้ใช้แบบ unit test |
+| `@playwright/test` | ทดสอบหน้าเว็บจริงบน browser รวมถึง responsive layout และ flow สำคัญ |
+| Firebase Console | เปิดผู้ให้บริการ Email/Password และ Google รวมถึงตั้ง Authorized domains |
+| Git และ GitHub | จัดการเวอร์ชันของโค้ดและเผยแพร่ source code ของโปรเจกต์ |
+
+รายชื่อและเวอร์ชันที่ใช้จริงอยู่ใน [package.json](package.json) และ `package-lock.json` จะล็อกเวอร์ชันที่ติดตั้งเพื่อให้เครื่องอื่นติดตั้งได้ใกล้เคียงกัน
 
 ## เริ่มใช้งานบนเครื่อง
 
@@ -89,6 +103,8 @@ npm install
 copy .env.example .env
 npm run dev
 ```
+
+`npm install` จะติดตั้งทุกไลบรารีจาก `package.json` ตามเวอร์ชันใน `package-lock.json` จึงไม่จำเป็นต้องติดตั้ง React, Firebase หรือเครื่องมือทดสอบทีละตัว
 
 เปิด URL ที่ Vite แสดงใน terminal โดยปกติคือ `http://localhost:5173`
 
@@ -129,6 +145,7 @@ e2e/           Playwright browser tests
 5. [Authentication และความปลอดภัย](document/05-authentication-and-security.md)
 6. [ดีไซน์, Asset และ Style](document/06-design-assets-and-styles.md)
 7. [สารบัญอ้างอิงไฟล์ต้นฉบับ](document/07-source-file-reference.md)
+8. [สารบัญภาพประกอบโครงการ (PDF)](document/Nexora-Image-Catalog.pdf)
 
 ## ขอบเขตของ Demo
 
