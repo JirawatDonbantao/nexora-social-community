@@ -147,6 +147,8 @@ e2e/           Playwright browser tests
 7. [สารบัญอ้างอิงไฟล์ต้นฉบับ](document/07-source-file-reference.md)
 8. [สารบัญภาพประกอบโครงการ (PDF - เปิดหรือดาวน์โหลด)](https://raw.githubusercontent.com/JirawatDonbantao/nexora-social-community/main/document/Nexora-Image-Catalog.pdf)
 
+> **หมายเหตุสำหรับ PDF:** หากหน้า preview ของ GitHub แสดงข้อความ `Unable to render code block` ให้เปลี่ยน GitHub เป็น **Light mode** (ไม่ใช้ธีมตามอุปกรณ์) แล้วเปิดลิงก์ PDF ด้านบนโดยตรง หรือดาวน์โหลดไฟล์ไปเปิดในเครื่อง
+
 ## ขอบเขตของ Demo
 
 - ยังไม่มี Firebase Database หรือ Storage ดังนั้นโพสต์/รูปที่ผู้ใช้สร้างไม่ถูกบันทึกถาวร
