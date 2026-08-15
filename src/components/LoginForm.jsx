@@ -17,8 +17,8 @@ function getFieldErrors(email, password) {
   };
 }
 
-function LoginForm({ onEmailLogin, onGoogleLogin }) {
-  const [email, setEmail] = useState("");
+function LoginForm({ onEmailLogin, onGoogleLogin }) { 
+  const [email, setEmail] = useState(""); 
   const [password, setPassword] = useState("");
   const [touched, setTouched] = useState({ email: false, password: false });
   const [hasSubmitted, setHasSubmitted] = useState(false);
@@ -30,6 +30,7 @@ function LoginForm({ onEmailLogin, onGoogleLogin }) {
   const fieldErrors = getFieldErrors(email, password);
   const showEmailError = (touched.email || hasSubmitted) && fieldErrors.email;
   const showPasswordError = (touched.password || hasSubmitted) && fieldErrors.password;
+
 
   function focusFirstInvalidField(errors) {
     if (errors.email) {
