@@ -14,7 +14,8 @@ function Login() {
 
   async function handleGoogleLogin() {
     await logInWithGoogle();
-    navigate("/", { replace: true });
+    navigate("/", { replace: true });  
+    
   }
 
   if (loading) {
